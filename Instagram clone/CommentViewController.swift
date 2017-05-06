@@ -41,6 +41,7 @@ class CommentViewController: UIViewController {
         postData.comments.append(commentData)
         let comments = ["comments": postData.comments]
         postRef.updateChildValues(comments)
+        SVProgressHUD.showSuccess(withStatus: "投稿しました")
             }
     
     override func didReceiveMemoryWarning() {
