@@ -9,6 +9,7 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     
@@ -30,6 +31,12 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setPostData(postData: PostData) {
+        var commentText: String = ""
+        
+        for i in 0..<postData.comments.count {
+            commentText = commentText + postData.comments[i]["name"]! + " : " + postData.comments[i]["comment"]! + "\n"
+        }
+        
         self.postImageView.image = postData.image
         
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
@@ -37,9 +44,8 @@ class PostTableViewCell: UITableViewCell {
         likeLabel.text = "\(likeNumber)"
         
         
-    self.commentLabel.text = "\(postData.comments)"
-        print("-----------------------")
-        print(postData.comments)
+    self.commentLabel.text = commentText
+        print(commentText)
         
 
         
