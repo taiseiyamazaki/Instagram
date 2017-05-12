@@ -37,7 +37,7 @@ class CommentViewController: UIViewController {
     }
     @IBAction func backBtn(_ sender: Any) {
         let postRef = FIRDatabase.database().reference().child(Const.PostPath).child(postData.id!)
-        let commentData = ["name": (FIRAuth.auth()?.currentUser?.displayName)!, "comment\n": commentTextField.text!]
+        let commentData = ["name": (FIRAuth.auth()?.currentUser?.displayName)!, "comment": commentTextField.text!]
         postData.comments.append(commentData)
         let comments = ["comments": postData.comments]
         postRef.updateChildValues(comments)
