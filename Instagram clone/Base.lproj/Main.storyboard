@@ -369,7 +369,7 @@
                                 </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="yGk-cb-Hy2" kind="show" id="UDD-Qn-1Ka"/>
+                                    <segue destination="GPC-yr-hp7" kind="unwind" unwindAction="backToTopWithSegue:" id="a1d-4E-3tt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -390,6 +390,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-an-VdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GPC-yr-hp7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1821.5999999999999" y="467.3163418290855"/>
         </scene>

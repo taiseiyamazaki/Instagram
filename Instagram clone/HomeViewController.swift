@@ -183,6 +183,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    @IBAction func backToTop(segue: UIStoryboardSegue) {}
 
     /*
     // MARK: - Navigation
